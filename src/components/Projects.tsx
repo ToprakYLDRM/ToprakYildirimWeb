@@ -1,7 +1,7 @@
 import React from 'react';
 import { Section } from './ui/Section';
 import { Button } from './ui/Button';
-import { Github, ExternalLink, Smartphone, Monitor, Play, Hourglass } from 'lucide-react';
+import { Github, Smartphone, Monitor, Play, Hourglass } from 'lucide-react';
 import hikayeviImage from '../assets/hikayevi.webp';
 import depostokImage from '../assets/depostok.webp';
 import ecomDashboardImage from '../assets/ecomdashboard.webp';
