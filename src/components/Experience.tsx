@@ -4,7 +4,7 @@ import { Briefcase, GraduationCap } from 'lucide-react';
 export const Experience: React.FC = () => {
     return (
         <Section id="experience" title="Experience & Education" subtitle="My professional journey and academic background." light>
-            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12">
 
                 {/* Experience Column */}
                 <div>

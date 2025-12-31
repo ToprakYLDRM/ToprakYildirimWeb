@@ -30,7 +30,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
     const isEven = index % 2 === 0;
 
     return (
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mb-24 last:mb-0">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mb-16 md:mb-24 last:mb-0">
             {/* Visual Side */}
             <div className={`w-full lg:w-[45%] ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                 <div className={`relative mx-auto ${project.type === 'mobile' ? 'max-w-[280px]' : 'max-w-full'}`}>
@@ -128,8 +128,8 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
                     {project.type === 'mobile' ? <Smartphone className="w-4 h-4" /> : <Monitor className="w-4 h-4" />}
                     {project.type === 'mobile' ? 'Mobile Application' : 'Web Platform'}
                 </div>
-                <h3 className="text-3xl font-bold text-dark mb-4">{project.title}</h3>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-dark mb-3 md:mb-4">{project.title}</h3>
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
                     {project.description}
                 </p>
 

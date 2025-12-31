@@ -23,10 +23,10 @@ export const Navbar: React.FC = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3 sm:py-4' : 'bg-transparent py-4 sm:py-6'
             }`}>
-            <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 flex items-center justify-between">
-                <a href="#" className="text-2xl font-bold text-dark tracking-tight">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 flex items-center justify-between">
+                <a href="#" className="text-xl sm:text-2xl font-bold text-dark tracking-tight">
                     Toprak Yıldırım
                 </a>
 
@@ -66,18 +66,20 @@ export const Navbar: React.FC = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 px-4 flex flex-col space-y-4">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            className="text-gray-600 hover:text-primary font-medium py-2"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            {link.name}
-                        </a>
-                    ))}
-                    <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
+                <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-2xl py-8 px-6 flex flex-col space-y-6 animate-slide-down">
+                    <div className="flex flex-col items-center space-y-6">
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                className="text-lg text-gray-700 hover:text-primary font-medium transition-colors"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {link.name}
+                            </a>
+                        ))}
+                    </div>
+                    <div className="flex flex-col space-y-3 pt-6 border-t border-gray-100 w-full max-w-xs mx-auto">
                         <Button variant="outline" className="w-full justify-center" href={cvPdf} download="Toprak-Yildirim-CV.pdf">
                             <Download className="w-4 h-4 mr-2" />
                             Download CV

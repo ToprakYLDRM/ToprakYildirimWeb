@@ -4,59 +4,59 @@ import { ArrowRight, Database, Server, Smartphone, Globe } from 'lucide-react';
 
 export const Hero: React.FC = () => {
     return (
-        <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-light">
-            <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 grid lg:grid-cols-2 gap-12 items-center">
+        <section className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-light">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 grid lg:grid-cols-2 gap-12 lg:gap-12 items-center">
 
                 {/* Text Content */}
-                <div className="space-y-8 z-10">
-                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-primary text-sm font-medium">
+                <div className="space-y-6 sm:space-y-8 z-10 text-center lg:text-left">
+                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-primary text-xs sm:text-sm font-medium">
                         <span className="w-2 h-2 rounded-full bg-primary mr-2 animate-pulse"></span>
                         Available for new projects
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark leading-tight tracking-tight">
+                    <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dark leading-tight tracking-tight">
                         Building Scalable <span className="text-primary">Backend Architectures</span> & Modern <span className="text-primary">Mobile Experiences</span>.
                     </h1>
 
-                    <p className="text-lg md:text-xl text-gray-600 max-w-xl leading-relaxed">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl leading-relaxed mx-auto lg:mx-0">
                         Specialized in .NET Core, C#, React, and SQL Server. Transforming complex data into user-friendly, enterprise-grade solutions.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <Button href="#projects" className="group">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+                        <Button href="#projects" className="group w-full sm:w-auto">
                             View Work
                             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </Button>
-                        <Button variant="outline" href="#contact">
+                        <Button variant="outline" href="#contact" className="w-full sm:w-auto">
                             Contact Me
                         </Button>
                     </div>
 
-                    <div className="pt-8 flex items-center gap-8 text-gray-500">
+                    <div className="pt-6 sm:pt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 text-gray-500">
                         <div className="flex items-center gap-2">
-                            <Server className="w-5 h-5" />
-                            <span className="text-sm font-medium">Backend Systems</span>
+                            <Server className="w-4 h-4 sm:w-5 sm:h-5" />
+                            <span className="text-xs sm:text-sm font-medium">Backend Systems</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <Smartphone className="w-5 h-5" />
-                            <span className="text-sm font-medium">Mobile Apps</span>
+                            <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />
+                            <span className="text-xs sm:text-sm font-medium">Mobile Apps</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <Globe className="w-5 h-5" />
-                            <span className="text-sm font-medium">Web Platforms</span>
+                            <Globe className="w-4 h-4 sm:w-5 sm:h-5" />
+                            <span className="text-xs sm:text-sm font-medium">Web Platforms</span>
                         </div>
                     </div>
                 </div>
 
                 {/* Visual Content - Abstract Code/Server Visualization */}
-                <div className="relative lg:h-[600px] flex items-center justify-center">
+                <div className="relative lg:h-[600px] flex items-center justify-center mt-2 lg:mt-0">
                     <div className="relative w-full max-w-lg aspect-square">
                         {/* Background Decor elements */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-200/50 rounded-full blur-3xl opacity-60"></div>
-                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-gray-200/50 rounded-full blur-3xl opacity-60"></div>
+                        <div className="absolute top-0 right-0 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-blue-200/50 rounded-full blur-3xl opacity-60"></div>
+                        <div className="absolute bottom-0 left-0 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-gray-200/50 rounded-full blur-3xl opacity-60"></div>
 
                         {/* Main Abstract Card */}
-                        <div className="absolute inset-0 bg-white rounded-2xl shadow-xl border border-gray-100 p-6 flex flex-col justify-between transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500 z-10">
+                        <div className="absolute inset-0 bg-white rounded-2xl shadow-xl border border-gray-100 p-6 flex flex-col justify-between transform -rotate-1 sm:rotate-[-2deg] hover:rotate-0 transition-transform duration-500 z-10">
                             <div className="flex items-center gap-2 mb-4 border-b pb-4 border-gray-100">
                                 <div className="w-3 h-3 rounded-full bg-red-400"></div>
                                 <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
@@ -110,12 +110,12 @@ export const Hero: React.FC = () => {
                         </div>
 
                         {/* Floating Elements */}
-                        <div className="absolute -right-8 top-1/4 bg-white p-4 rounded-xl shadow-lg border border-gray-100 z-20 animate-bounce" style={{ animationDuration: '3s' }}>
-                            <Database className="w-8 h-8 text-primary" />
+                        <div className="absolute -right-4 sm:-right-8 top-1/4 bg-white p-2 sm:p-4 rounded-xl shadow-lg border border-gray-100 z-20 animate-bounce hidden sm:block" style={{ animationDuration: '3s' }}>
+                            <Database className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                         </div>
 
-                        <div className="absolute -left-8 bottom-1/4 bg-white p-4 rounded-xl shadow-lg border border-gray-100 z-20 animate-bounce" style={{ animationDuration: '4s' }}>
-                            <span className="font-bold text-2xl text-dark">JS</span>
+                        <div className="absolute -left-4 sm:-left-8 bottom-1/4 bg-white p-2 sm:p-4 rounded-xl shadow-lg border border-gray-100 z-20 animate-bounce hidden sm:block" style={{ animationDuration: '4s' }}>
+                            <span className="font-bold text-xl sm:text-2xl text-dark">JS</span>
                         </div>
                     </div>
                 </div>
