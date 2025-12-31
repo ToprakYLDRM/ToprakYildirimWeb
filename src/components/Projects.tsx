@@ -250,7 +250,7 @@ export const Projects: React.FC = () => {
     ];
 
     return (
-        <Section id="projects" title="Featured Projects" subtitle="A selection of my recent work in mobile and backend development.">
+        <Section id="projects" title="Featured Projects" subtitle="A selection of my recent work in mobile and backend development." className="overflow-hidden">
             <div className="mt-12">
                 {projects.map((project, index) => (
                     <ProjectCard key={index} project={project} index={index} />
